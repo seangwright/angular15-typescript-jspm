@@ -31,7 +31,7 @@ node_modules
 jspm_packages
 
 # Tooling
-# typings
+typings
 
 # Optional npm cache directory
 .npm
