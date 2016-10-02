@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>User Component Demo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+    <script src="jspm_packages/system.js"></script>
+    <script src="config.js"></script>
+    <script>
+        System.import("app")
+            .catch(function(err) { 
+                console.error(err);
+            });
+    </script>
+</head>
+
+<body>
+    <div id="app-container">
+        <user-list></user-list>
+    </div>
+</body>
+
+</html>

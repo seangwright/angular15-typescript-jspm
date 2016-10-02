@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "module": "system",
+        "target": "es5",
+        "noImplicitAny": false,
+        "sourceMap": true,
+        "removeComments": false,
+        "moduleResolution": "node"
+    },
+    "exclude": [
+        "node_modules",
+        "jspm_packages",
+        "typings/main",
+        "typings/main.d.ts"
+    ]
+}

@@ -1,0 +1,7 @@
+<h4>Editing User {{ ::$ctrl.user.id }}</h4>
+
+<input type="text" ng-model="$ctrl.user.name" ng-disabled="$ctrl.componentState.isLoading" />
+<button ng-click="$ctrl.saveUser()" ng-disabled="$ctrl.componentState.isLoading">
+    <span ng-if="!$ctrl.componentState.isLoading">Save</span>
+    <span ng-if="$ctrl.componentState.isLoading">Saving...</span>
+</button>
