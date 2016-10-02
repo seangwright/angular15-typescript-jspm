@@ -1,0 +1,19 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.DS_Store": true,
+        "**/jspm_packages": true,
+        "**/node_modules": true,
+        "**/*.js": {"when": "$(basename).ts"},"**/*.map": {"when": "$(basename).map"}
+    },
+    "tslint.enable": true,
+    "tslint.ignoreDefinitionFiles": true,
+    "typescript.tsdk": "/node_modules/typescript/lib",
+    "tslint.exclude": [
+        "/node_modules",
+        "/jspm_packages",
+        "/typings"
+    ]
+}

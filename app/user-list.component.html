@@ -1,0 +1,16 @@
+<div>
+    <ul>
+        <li ng-repeat="user in $ctrl.users">
+            <user
+                user="user"
+                on-user-select="$ctrl.userSelectHandler(user)">
+            </user>
+        </li>
+    </ul>
+</div>
+<div>
+    <user-form ng-if="$ctrl.selectedUser"
+        user="$ctrl.selectedUser" 
+        on-user-save="$ctrl.userSaveHandler(user)">
+    </user-form>
+</div>
