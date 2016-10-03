@@ -1,6 +1,30 @@
 # angular15-typescript-jspm
 Demo of using Angular ^1.5.8, Typescript ^2.0.0 and JSPM
 
+## Why use Angular 1 Components, Typescript and JSPM?
+* Angular Components
+    1. Modular component-based architecture
+    1. Predicatable one-way data flow
+    1. 100% of the time, Angular `component`'s simpler API compared to Angular `directives`, works 80% of the time
+* Typescript
+    1. Use types only when you want to
+    1. Type checking on your own code leads to better scalability in development process for large apps/large teams
+    1. Not just for your code: type checking on 3rd party libraries with `typings`
+* JSPM
+    1. Automated build process
+    1. Automated dependency management
+    1. Use es2015 modules today
+
+## Links
+* [JSPM](http://jspm.io)
+* [SystemJs](https://github.com/systemjs/systemjs)
+* [Typescript](https://github.com/basarat/typescript-book)
+* [Tslint](http://palantir.github.io/tslint/usage/cli/)
+* [Typings](https://www.npmjs.com/package/typings)
+* [Definitely Typed: Old typings repository](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/README.md)
+* [Angular 1.5 Component](https://toddmotto.com/exploring-the-angular-1-5-component-method/)
+* [Component Lifecycle Hooks](https://toddmotto.com/angular-1-5-lifecycle-hooks)
+
 ## Installation
 1. node and npm (go [download](https://nodejs.org) it from the web or using your favorite package manager)
 1. jspm CLI (`npm i -g jspm`)
