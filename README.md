@@ -5,7 +5,7 @@ Demo of using Angular ^1.5.8, Typescript ^2.0.0 and JSPM
 * Angular Components
     1. Modular component-based architecture
     1. Predicatable one-way data flow
-    1. 100% of the time, Angular `component`'s simpler API compared to Angular `directives`, works 80% of the time
+    1. 100% of the time, Angular `component`'s simpler API compared to Angular `directives`, covers your use case 80% of the time
 * Typescript
     1. Use types only when you want to
     1. Type checking on your own code leads to better scalability in development process for large apps/large teams
