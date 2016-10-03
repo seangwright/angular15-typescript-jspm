@@ -7,6 +7,7 @@ Demo of using Angular ^1.5.8, Typescript ^2.0.0 and JSPM
 1. TypeScript CLI (`npm i -g typescript`)
 1. Typings CLI (`npm i -g typings`)
 1. TSLint (`npm i -g tslint`)
+1. `jspm registry config github` - use [Github personal access tokens](https://github.com/settings/tokens)
 1. clone repository (`git clone https://github.com/sgwatgit/angular15-typescript-jspm.git`)
 1. `cd angular15-typescript-jspm`
 1. Run `npm install` afterward to restore all the neccessary dependencies.
