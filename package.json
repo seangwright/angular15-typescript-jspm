@@ -21,7 +21,6 @@
     "unbundle": "jspm unbundle"
   },
   "devDependencies": {
-    "concurrently": "^3.1.0",
     "jspm": "^0.16.46",
     "lite-server": "^2.2.2",
     "typescript": "^2.0.3",
