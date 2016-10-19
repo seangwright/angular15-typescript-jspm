@@ -1,7 +1,7 @@
 {
   "version": false,
   "dependencies": {
-    "lodash": "registry:npm/lodash#4.0.0+20160723033700"
+    "lodash": "registry:npm/lodash#4.0.0+20161015015725"
   },
   "globalDependencies": {
     "angular": "registry:dt/angular#1.5.0+20161016133926",
