@@ -1,3 +1,9 @@
+// Uncomment to pull in all polyfills for IE11, ect..
+// import "core-js" 
+
+// Uncomment to pull in a single polyfill (for Map in this example) - look in jspm_packages/npm/core-js\@2.4.1/modules/ for full list
+// import "core-js/modules/es6.map";
+
 import * as ng from "angular";
 
 import { UserService } from "./user.service";
