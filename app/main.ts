@@ -6,21 +6,17 @@
 
 import * as ng from "angular";
 
-import { UserService } from "./user.service";
+import * as userSvcs from "./user/index";
 
-import { UserFormComponent } from "./user-form.component";
-
-import { UserListComponent } from "./user-list.component";
-
-import { UserComponent } from "./user.component";
+import * as userCmpt from "./user/components/index";
 
 let moduleName = "demo";
 
 ng.module(moduleName, [])
-    .service(UserService.serviceName, UserService)
-    .component(UserFormComponent.controller.componentName, UserFormComponent)
-    .component(UserComponent.controller.componentName, UserComponent)
-    .component(UserListComponent.controller.componentName, UserListComponent);
+    .service(userSvcs.UserService.serviceName, userSvcs.UserService)
+    .component(userCmpt.UserFormComponent.controller.componentName, userCmpt.UserFormComponent)
+    .component(userCmpt.UserComponent.controller.componentName, userCmpt.UserComponent)
+    .component(userCmpt.UserListComponent.controller.componentName, userCmpt.UserListComponent);
 
 let appRootEl = document.querySelector("#app-container") || document.body;
 
