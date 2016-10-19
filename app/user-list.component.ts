@@ -6,7 +6,7 @@ import { IUserService, UserService } from "./user.service";
 
 import template from "./user-list.component.html!text";
 
-class UserListController {
+class controller {
     public static componentName: string = "userList";
     public static $inject: Array<string> = ["$log", UserService.serviceName];
 
@@ -41,9 +41,4 @@ class UserListController {
     }
 }
 
-let UserListComponent = {
-    controller: UserListController,
-    template: template
-};
-
-export { UserListComponent };
+export let UserListComponent = { controller, template };

@@ -23,7 +23,7 @@ let bindings: IBindings = {
     onUserSave: "&"
 };
 
-class UserFormController implements IBindings {
+class controller implements IBindings {
     public static componentName: string = "userForm";
     public static $inject: Array<string> = ["$log"];
 
@@ -60,10 +60,4 @@ class UserFormController implements IBindings {
     }
 }
 
-let UserFormComponent = {
-    bindings: bindings,
-    controller: UserFormController,
-    template: template
-};
-
-export { UserFormComponent };
+export let UserFormComponent = { controller, template, bindings };

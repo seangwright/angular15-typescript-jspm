@@ -23,7 +23,7 @@ let bindings: IBindings = {
     onUserSelect: "&"
 };
 
-class UserController implements IBindings {
+class controller implements IBindings {
     public static componentName: string  = "user";
     public static $inject: Array<string> = ["$log"];
 
@@ -45,10 +45,4 @@ class UserController implements IBindings {
     }
 }
 
-let UserComponent = {
-    bindings: bindings,
-    controller: UserController,
-    template: template
-};
-
-export { UserComponent };
+export let UserComponent = { controller, template, bindings };
