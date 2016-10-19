@@ -28,9 +28,14 @@ System.config({
     "core-js": "npm:core-js@2.4.1",
     "lodash": "npm:lodash@4.16.4",
     "text": "github:systemjs/plugin-text@0.0.9",
+    "toastr": "github:CodeSeven/toastr@2.1.3",
     "ts": "github:frankwallis/plugin-typescript@5.2.7",
     "ts-runtime": "npm:babel-runtime@5.8.38",
     "typescript": "npm:typescript@2.0.3",
+    "github:CodeSeven/toastr@2.1.3": {
+      "css": "github:systemjs/plugin-css@0.1.31",
+      "jquery": "github:components/jquery@3.1.1"
+    },
     "github:frankwallis/plugin-typescript@5.2.7": {
       "typescript": "npm:typescript@2.0.3"
     },
