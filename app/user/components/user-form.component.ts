@@ -24,8 +24,8 @@ let bindings: IBindings = {
 };
 
 class controller implements IBindings {
-    public static componentName: string = "userForm";
-    public static $inject: Array<string> = ["$log"];
+    public static readonly componentName: string = "userForm";
+    public static readonly $inject: Array<string> = ["$log"];
 
     public user: User;
 

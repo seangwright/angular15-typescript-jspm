@@ -7,8 +7,8 @@ export interface IUserService {
 }
 
 export class UserService implements IUserService {
-    public static serviceName: string = "UserService";
-    public static $inject: Array<string> = ["$timeout", NotificationService.serviceName];
+    public static readonly serviceName: string = "UserService";
+    public static readonly $inject: Array<string> = ["$timeout", NotificationService.serviceName];
 
     constructor(
         private $timeout: ng.ITimeoutService,
