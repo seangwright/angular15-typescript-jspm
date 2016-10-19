@@ -7,8 +7,8 @@ export interface INotificationService {
 }
 
 export class NotificationService implements INotificationService {
-    public static serviceName: string = "NotificationService";
-    public static $inject: Array<string> = [];
+    public static readonly serviceName: string = "NotificationService";
+    public static readonly $inject: Array<string> = [];
 
     constructor() {}
 

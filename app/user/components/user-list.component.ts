@@ -7,8 +7,8 @@ import { IUserService, UserService } from "../services/index";
 import template from "./user-list.component.html!text";
 
 class controller {
-    public static componentName: string = "userList";
-    public static $inject: Array<string> = ["$log", UserService.serviceName];
+    public static readonly componentName: string = "userList";
+    public static readonly $inject: Array<string> = ["$log", UserService.serviceName];
 
     public selectedUser: User;
 
