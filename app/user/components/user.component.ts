@@ -1,6 +1,6 @@
 import _ from "lodash";
 
-import { User } from "./user";
+import { User } from "../models/index";
 
 import template from "./user.component.html!text";
 
@@ -23,7 +23,7 @@ let bindings: IBindings = {
     onUserSelect: "&"
 };
 
-class UserController implements IBindings {
+class controller implements IBindings {
     public static componentName: string  = "user";
     public static $inject: Array<string> = ["$log"];
 
@@ -35,20 +35,15 @@ class UserController implements IBindings {
 
     public $onChanges(changes: Changes) {
         if (changes.user && this.user) {
-            this.$log.info("User changed");
+            this.$log.info("User binding changed");
             this.user = _.cloneDeep(this.user);
         }
     }
 
     public select() {
+        this.$log.info(`User ${this.user.name} selected`);
         this.onUserSelect({ user: this.user });
     }
 }
 
-let UserComponent = {
-    bindings: bindings,
-    controller: UserController,
-    template: template
-};
-
-export { UserComponent };
+export let UserComponent = { controller, template, bindings };

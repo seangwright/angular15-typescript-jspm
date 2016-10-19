@@ -1,7 +1,11 @@
 System.config({
   baseURL: "/",
   defaultJSExtensions: true,
-  transpiler: "typescript",
+  transpiler: "ts",
+  typescriptOptions: {
+    "tsconfig": true,
+    "inlineSourceMaps": false
+  },
   paths: {
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
@@ -9,18 +13,30 @@ System.config({
 
   packages: {
     "app": {
-      "main": "main.js",
-      "defaultJSextension": "js"
+      "main": "main.ts",
+      "defaultExtension": "ts",
+      "meta": {
+        "*.ts": {
+          "loader": "ts"
+        }
+      }
     }
   },
 
   map: {
     "angular": "github:angular/bower-angular@1.5.8",
-    "lodash": "npm:lodash@4.16.2",
+    "core-js": "npm:core-js@2.4.1",
+    "lodash": "npm:lodash@4.16.4",
     "text": "github:systemjs/plugin-text@0.0.9",
-    "ts": "github:frankwallis/plugin-typescript@5.2.1",
-    "typescript": "npm:typescript@1.8.10",
-    "github:frankwallis/plugin-typescript@5.2.1": {
+    "toastr": "github:CodeSeven/toastr@2.1.3",
+    "ts": "github:frankwallis/plugin-typescript@5.2.7",
+    "ts-runtime": "npm:babel-runtime@5.8.38",
+    "typescript": "npm:typescript@2.0.3",
+    "github:CodeSeven/toastr@2.1.3": {
+      "css": "github:systemjs/plugin-css@0.1.31",
+      "jquery": "github:components/jquery@3.1.1"
+    },
+    "github:frankwallis/plugin-typescript@5.2.7": {
       "typescript": "npm:typescript@2.0.3"
     },
     "github:jspm/nodelibs-assert@0.1.0": {
@@ -40,6 +56,9 @@ System.config({
     },
     "github:jspm/nodelibs-os@0.1.0": {
       "os-browserify": "npm:os-browserify@0.1.2"
+    },
+    "github:jspm/nodelibs-path@0.1.0": {
+      "path-browserify": "npm:path-browserify@0.0.0"
     },
     "github:jspm/nodelibs-process@0.1.2": {
       "process": "npm:process@0.11.9"
@@ -68,6 +87,9 @@ System.config({
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.2",
       "util": "npm:util@0.10.3"
+    },
+    "npm:babel-runtime@5.8.38": {
+      "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:bn.js@4.11.6": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
@@ -127,7 +149,7 @@ System.config({
       "base64-js": "npm:base64-js@0.0.8",
       "child_process": "github:jspm/nodelibs-child_process@0.1.0",
       "fs": "github:jspm/nodelibs-fs@0.1.2",
-      "ieee754": "npm:ieee754@1.1.6",
+      "ieee754": "npm:ieee754@1.1.8",
       "isarray": "npm:isarray@1.0.0",
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
@@ -138,6 +160,12 @@ System.config({
       "string_decoder": "github:jspm/nodelibs-string_decoder@0.1.0"
     },
     "npm:constants-browserify@0.0.1": {
+      "systemjs-json": "github:systemjs/plugin-json@0.1.2"
+    },
+    "npm:core-js@2.4.1": {
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "path": "github:jspm/nodelibs-path@0.1.0",
+      "process": "github:jspm/nodelibs-process@0.1.2",
       "systemjs-json": "github:systemjs/plugin-json@0.1.2"
     },
     "npm:core-util-is@1.0.2": {
@@ -173,7 +201,7 @@ System.config({
       "create-hmac": "npm:create-hmac@1.1.4",
       "diffie-hellman": "npm:diffie-hellman@5.0.2",
       "inherits": "npm:inherits@2.0.1",
-      "pbkdf2": "npm:pbkdf2@3.0.8",
+      "pbkdf2": "npm:pbkdf2@3.0.9",
       "public-encrypt": "npm:public-encrypt@4.0.0",
       "randombytes": "npm:randombytes@2.0.3",
       "systemjs-json": "github:systemjs/plugin-json@0.1.2"
@@ -226,10 +254,13 @@ System.config({
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "create-hash": "npm:create-hash@1.1.2",
       "evp_bytestokey": "npm:evp_bytestokey@1.0.0",
-      "pbkdf2": "npm:pbkdf2@3.0.8",
+      "pbkdf2": "npm:pbkdf2@3.0.9",
       "systemjs-json": "github:systemjs/plugin-json@0.1.2"
     },
-    "npm:pbkdf2@3.0.8": {
+    "npm:path-browserify@0.0.0": {
+      "process": "github:jspm/nodelibs-process@0.1.2"
+    },
+    "npm:pbkdf2@3.0.9": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "create-hmac": "npm:create-hmac@1.1.4",
       "crypto": "github:jspm/nodelibs-crypto@0.1.0",
@@ -282,9 +313,6 @@ System.config({
     },
     "npm:string_decoder@0.10.31": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0"
-    },
-    "npm:typescript@1.8.10": {
-      "os": "github:jspm/nodelibs-os@0.1.0"
     },
     "npm:typescript@2.0.3": {
       "crypto": "github:jspm/nodelibs-crypto@0.1.0",

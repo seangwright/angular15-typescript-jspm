@@ -3,25 +3,24 @@
   "version": "1.0.0",
   "description": "Demo of using Angular ^1.5.8, Typescript ^2.0.0 and JSPM",
   "repository": {
-      "url": "https://github.com/sgwatgit/angular15-typescript-jspm.git",
-      "type": "git"
+    "url": "https://github.com/sgwatgit/angular15-typescript-jspm.git",
+    "type": "git"
   },
   "readme": "README.md",
   "main": "main.ts",
   "scripts": {
-    "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" --kill-others",
+    "start": "jspm unbundle && npm run lite",
     "postinstall": "jspm install && typings install",
     "lite": "lite-server",
     "jspm": "jspm",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "typings": "typings",
-    "bundle:prod": "jspm bundle app --minify --inject",
-    "bundle": "jspm bundle app --inject",
+    "bundle:prod": "jspm bundle-sfx app --minify --inject",
+    "bundle": "jspm bundle-sfx app --inject",
     "unbundle": "jspm unbundle"
   },
   "devDependencies": {
-    "concurrently": "^3.1.0",
     "jspm": "^0.16.46",
     "lite-server": "^2.2.2",
     "typescript": "^2.0.3",
@@ -32,11 +31,14 @@
   "jspm": {
     "dependencies": {
       "angular": "github:angular/bower-angular@^1.5.8",
+      "core-js": "npm:core-js@^2.4.1",
       "lodash": "npm:lodash@^4.15.0",
       "text": "github:systemjs/plugin-text@^0.0.9",
+      "toastr": "github:CodeSeven/toastr@^2.1.3",
       "ts": "github:frankwallis/plugin-typescript@^5.1.2"
     },
     "devDependencies": {
+      "ts-runtime": "npm:babel-runtime@^5.8.24",
       "typescript": "npm:typescript@^2.0.3"
     }
   }

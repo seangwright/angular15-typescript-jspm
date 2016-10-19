@@ -10,7 +10,7 @@
     },
     "tslint.enable": true,
     "tslint.ignoreDefinitionFiles": true,
-    "typescript.tsdk": "/node_modules/typescript/lib",
+    "typescript.tsdk": "node_modules/typescript/lib",
     "tslint.exclude": [
         "/node_modules",
         "/jspm_packages",
