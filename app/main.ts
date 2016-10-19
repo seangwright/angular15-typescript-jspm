@@ -6,13 +6,16 @@
 
 import * as ng from "angular";
 
-import * as userSvcs from "./user/index";
+import * as shrdSvcs from "./shared/index";
 
 import * as userCmpt from "./user/components/index";
+import * as userSvcs from "./user/index";
 
 let moduleName = "demo";
 
 ng.module(moduleName, [])
+    .service(shrdSvcs.NotificationService.serviceName, shrdSvcs.NotificationService)
+
     .service(userSvcs.UserService.serviceName, userSvcs.UserService)
     .component(userCmpt.UserFormComponent.controller.componentName, userCmpt.UserFormComponent)
     .component(userCmpt.UserComponent.controller.componentName, userCmpt.UserComponent)
