@@ -2,11 +2,11 @@ import { User } from "../models/index";
 
 import { INotificationService, NotificationService } from "../../shared/index";
 
-interface IUserService {
+export interface IUserService {
     saveUser(user: User): ng.IPromise<User>;
 }
 
-class UserService implements IUserService {
+export class UserService implements IUserService {
     public static serviceName: string = "UserService";
     public static $inject: Array<string> = ["$timeout", NotificationService.serviceName];
 
@@ -24,5 +24,3 @@ class UserService implements IUserService {
         return new User(user.id, user.name);
     }
 }
-
-export { IUserService, UserService };
