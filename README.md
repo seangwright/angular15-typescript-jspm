@@ -76,10 +76,14 @@ Demo of using Angular ^1.5.8, Typescript ^2.0.0 and JSPM
 
 #### Production
 * `npm run bundle` or `npm run bundle:prod`
-  * **NOTE:** Once bundled is created and injected, the app will be served from the generated `bundle.js` and therefore will break live-reloading while in development mode.
-To re-enable live-reloading for script, run `npm run unbundle` to remove the bundling and rebundle again once you are ready for deployment.
+  * **NOTE:** Once bundled is created and injected, the app will be served from the generated `build.js` and therefore will break live-reloading while in development mode.
+To re-enable live-reloading for script, run `npm run unbundle` or `npm start` to remove the bundling and rebundle again once you are ready for deployment.
+* Copy `build.js` to server and add script tag. Ensure `<user-list></user-list>` tag exists on page to give angular component a hook.
+
+#### Alternative Production
+* Update `package.json` scripts `npm run bundle` and `npm run bundle:prod` to `jspm bundle` instead of `jspm bundle-sfx`. This will produce a bundle which is not self-executing and will need to be imported into your page manually. It also does not include the module dependencies or the module loader so they will need to be added. 
 * Copy `config.js`, `build.js` and `jspm_packages/system.js` to your server and add the following script tags
-   * **Note:** If you need to support IE11 you will also need to deploy `jspm_packages/system-polyfills.js`
+   * **Note:** If you need to support IE11 you will also need to deploy `jspm_packages/system-polyfills.js` but it does not need a `<script>` tag since `system.js` will pull it in automatically if needed.
 
 ```javascript
 <script src="/system.js"></script>
