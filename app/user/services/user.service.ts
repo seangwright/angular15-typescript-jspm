@@ -1,4 +1,4 @@
-import { User } from "./user";
+import { User } from "../models/index";
 
 interface IUserService {
     saveUser(user: User): ng.IPromise<User>;

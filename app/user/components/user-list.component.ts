@@ -1,8 +1,8 @@
 import _ from "lodash";
 
-import { User } from "./user";
+import { User } from "../models/index";
 
-import { IUserService, UserService } from "./user.service";
+import { IUserService, UserService } from "../services/index";
 
 import template from "./user-list.component.html!text";
 

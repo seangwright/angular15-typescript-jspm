@@ -1,6 +1,6 @@
 import _ from "lodash";
 
-import { User } from "./user";
+import { User } from "../models/index";
 
 import template from "./user.component.html!text";
 
