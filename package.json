@@ -9,7 +9,7 @@
   "readme": "README.md",
   "main": "main.ts",
   "scripts": {
-    "start": "npm run lite",
+    "start": "jspm unbundle && npm run lite",
     "postinstall": "jspm install && typings install",
     "lite": "lite-server",
     "jspm": "jspm",
