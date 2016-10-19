@@ -11,9 +11,7 @@ class UserService implements IUserService {
     constructor(private $timeout: ng.ITimeoutService) {}
 
     public saveUser(user: User): ng.IPromise<User> {
-        return this.$timeout(() => {
-            return new User(user.id, user.name);
-        }, 3000);
+        return this.$timeout(() => new User(user.id, user.name), 3000);
     }
 }
 
